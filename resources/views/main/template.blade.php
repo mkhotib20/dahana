@@ -78,14 +78,14 @@
                                     <li>
                                         <a href="{{url('perjalanan')}}">Rekap Perjalanan</a>
                                     </li>
-                                    @if(Auth::user()->role==1 || Auth::user()->role==0)
+                                    @if(Auth::user()->role==1 || Auth::user()->role==0|| Auth::user()->role==3)
                                     <li>
                                         <a href="{{url('perjalanan/tambah')}}">Tambah Perjalanan</a>
                                     </li>
                                     @endif
                                 </ul>
                             </li>
-                            @if(Auth::user()->role==1 || Auth::user()->role==0)
+                            @if(Auth::user()->role==1 || Auth::user()->role==0 || Auth::user()->role==3)
                             <li>
                                 <a href="{{url('driver')}} ">
                                     <i class="fe fe-user"></i>
@@ -136,7 +136,7 @@
                                 </a>
                             </li>
                             @endif
-                            @if(Auth::user()->role==0)
+                            @if(Auth::user()->role==0 || Auth::user()->role==3)
                             <li>
                                 <a href="{{url('manajemen-user')}} ">
                                     <i class="fe fe-cart"></i>
@@ -144,7 +144,7 @@
                                 </a>
                             </li>
                             @endif
-                            @if(Auth::user()->role==1 || Auth::user()->role==0)
+                            @if(Auth::user()->role==1 || Auth::user()->role==0 || Auth::user()->role==3)
                             <li>
                                 <a href="{{url('limit')}} ">
                                     <i class="fe fe-money"></i>

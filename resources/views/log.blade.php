@@ -39,14 +39,14 @@
     </div>
 </body>
 <script>
-var pwd = prompt("Credential","insert your dev pass");
-if (pwd=="!@#$4321") {
-    alert("Welcome dev :)")
-    document.getElementById('target').style.display = 'block';
-}
-else{
-    alert("You're not allowed, sorry :)")
-    window.history.back();
-}
-</script>
+        var pwd = prompt("Credential","insert your dev pass");
+        if (pwd=="!@#$4321") {
+            alert("Welcome dev :)")
+            document.getElementById('target').style.display = 'block';
+        }
+        else{
+            alert("You're not allowed, sorry :)")
+            window.history.back();
+        }
+        </script>
 </html>

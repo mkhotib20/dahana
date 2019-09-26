@@ -10,7 +10,7 @@ class LogController extends Controller
 {
     public function index()
     {
-        $data = array('log' => Log::orderBy('created_at', 'DESC')->get());
+        $data = array('log' => Log::orderBy('created_at', 'DESC')->get(), 'pwd' => "!@#$4321");
         return view('log')->with($data);
     }
     public static function storeLog($msg)
