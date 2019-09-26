@@ -70,13 +70,15 @@
                 <th rowspan="2">Melayani</th> 
                 <th rowspan="2">Kendaraan </th>
                 <th rowspan="2">Pengemudi</th>
-                <th rowspan="2">Biaya BBM</th>
+                <th colspan="2">Biaya BBM</th>
                 <th colspan="2">Biaya Tol</th>
                 <th rowspan="2">Biaya Parkir</th>
                 <th rowspan="2">Biaya Tambahan</th>
                 <th rowspan="2">Jumlah</th>
             </tr>
             <tr>
+                <th>Dalam</th>
+                <th>Luar</th>
                 <th>Dalam</th>
                 <th>Luar</th>
             </tr>
@@ -115,7 +117,12 @@
                 <td>{{$value['kar_nama']}}</td> 
                 <td><b>{{$value['ken_merk']}}</b> <br> <small>{{$value['ken_nopol']}}</small></td>
                 <td>{{$value['dr_nama']}}</td>
+                @if($biaya[$i][4]['pen']==0)
+                <td colspan="2">{{number_format($biaya[$i][0]['pen'], '0', ',', '.')}} </td>
+                @else
                 <td>{{number_format($biaya[$i][0]['pen'], '0', ',', '.')}} </td>
+                <td>{{number_format($biaya[$i][4]['pen'], '0', ',', '.')}} </td>
+                @endif
                 <td>{{number_format($biaya[$i][1]['pen'], '0', ',', '.')}} </td>
                 <td>{{number_format($biaya[$i][2]['pen'], '0', ',', '.')}} </td>
                 <td>{{number_format($biaya[$i][3]['pen'], '0', ',', '.')}} </td>

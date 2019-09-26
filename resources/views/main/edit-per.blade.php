@@ -177,7 +177,7 @@
                                                                                     <h5 class="text-danger mb-1">Biaya di kota </h5> <br>
                                                                                     <div class="row">
                                                                                         <div class="col-md-10">
-                                                                                            <div class="row">
+                        <div class="row">                                                                                                <input type="hidden" value="0" name="pk_bbm[]" placeholder="Biaya BBM" type="text">
                                                                                                 <div class="col-md-4">
                                                                                                     <input value="1" placeholder="Durasi (hari)" name="pk_dur[]" id="dur_n" type="text">
                                                                                                 </div>

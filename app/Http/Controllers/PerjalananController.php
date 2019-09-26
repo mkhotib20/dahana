@@ -268,12 +268,12 @@ class PerjalananController extends Controller
             ['tp_per'=>$tp_per, 'tp_tj'=>$tp_tj, 'tp_bbm' => $bbm, 'tp_cp' => $cp, 'tp_tol' => $tp_tol]
         );
     }
-    public function storePK($pk_per, $pk_kt, $dur, $pk_pr, $pk_tol)
+    public function storePK($pk_per, $pk_kt, $dur, $pk_pr, $pk_tol, $pk_bbm)
     {
         $saku = Saku::find(1)->saku;
         $saku = $dur*$saku;
         PerKota::create(
-            ['pk_per'=>$pk_per, 'pk_kt'=>$pk_kt, 'pk_dur' => $dur, 'pk_saku' => $saku, 'pk_parkir' =>$pk_pr, 'pk_tol' => $pk_tol]
+            ['pk_per'=>$pk_per, 'pk_kt'=>$pk_kt, 'pk_dur' => $dur, 'pk_saku' => $saku, 'pk_parkir' =>$pk_pr, 'pk_tol' => $pk_tol, 'pk_bbm' =>$pk_bbm]
         );
     }
     public function getKtId($kt_nama)
@@ -445,6 +445,7 @@ class PerjalananController extends Controller
                 if ($kt_nama[$i]!='' || $kt_nama[$i]!='0') {
                     $tol = $kt_tol[$i]/$dur[$i];
                     $parkir = $kt_parkir[$i]/$dur[$i];
+                    $pkBbm = $pk_bbm[$i]/$dur[$i];
                     $this->storeKota($kt_nama[$i], $tol, $parkir);
                     $kt_id = $this->getKtId($kt_nama[$i]);
                     $this->storeTujuan($tj_kota_1, $kt_id, $tj_jarak[$i], $tj_tol[$i]);
@@ -454,7 +455,7 @@ class PerjalananController extends Controller
                         $cp = $i+1+$cpF;
                         $this->storeTP($per_id, $tj_id, $per_bbm[$i], $cp, $tj_tol[$i]);
                     }
-                    $this->storePK($per_id, $kt_id, $dur[$i], $parkir, $tol);
+                    $this->storePK($per_id, $kt_id, $dur[$i], $parkir, $tol, $pkBbm);
                     $tj_kota_1 = $kt_id;
                 }
             }
@@ -475,6 +476,7 @@ class PerjalananController extends Controller
             for ($i=0; $i < count($kt_nama); $i++) { 
                 $tol = $kt_tol[$i]/$dur[$i];
                 $parkir = $kt_parkir[$i]/$dur[$i];
+                $pkBbm = $pk_bbm[$i]/$dur[$i];
                 $this->storeKota($kt_nama[$i], $tol, $parkir);
                 $kt_id = $this->getKtId($kt_nama[$i]);
                 $this->storeTujuan($tj_kota_1, $kt_id, $tj_jarak[$i], $tj_tol[$i]);
@@ -482,7 +484,7 @@ class PerjalananController extends Controller
                 $cp = $i+1;
                 $this->storeTP($per_id, $tj_id, $per_bbm[$i], $cp, $tj_tol[$i]);
                 $lastDur = ($i==count($kt_nama)-1) ? 0 : $dur[$i] ;
-                $this->storePK($per_id, $kt_id, $lastDur, $parkir, $tol);
+                $this->storePK($per_id, $kt_id, $lastDur, $parkir, $tol, $pkBbm);
                 if ($i != count($kt_nama)-1) {
                     $per_tujuan[$i] = $kt_nama[$i];
                 }

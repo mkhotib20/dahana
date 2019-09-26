@@ -92,6 +92,7 @@ class InvoiceController extends Controller
         $karyawan = $perjalanan->per_karyawan;
         $karq = Karyawan::find($karyawan);
         $kar_uk = $karq->kar_uk;
+        $bbm_dalam = 0;
         
         $biayaPerjalanan = Biaya::where('b_tp', $idPerjalanan)->get()->toArray();
         $query = array_map(function ($value) {
@@ -101,6 +102,7 @@ class InvoiceController extends Controller
         for ($i=0; $i <count($per_kota) ; $i++) {
             $tol[$i] = $per_kota[$i]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
             $parkir[$i] = $per_kota[$i]['pk_parkir'];
+            $bbm_dalam += ($per_kota[$i]['pk_bbm']);
         }
 
         for ($i=0; $i <count($query) ; $i++) { 
@@ -115,7 +117,8 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM', 'nominal' => $biaya_bbm),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
+            array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol),
             array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir),
@@ -165,10 +168,11 @@ class InvoiceController extends Controller
         $query = array_map(function ($value) {
             return (array)$value;
         }, $query);
-        
+        $bbm_dalam = 0;
         for ($i=0; $i <count($per_kota) ; $i++) {
             $tol[$i] = $per_kota[$i]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
             $parkir[$i] = $per_kota[$i]['pk_parkir'];
+            $bbm_dalam += $per_kota[$i]['pk_bbm'];
         }
 
         for ($i=0; $i <count($query) ; $i++) { 
@@ -183,19 +187,21 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM', 'nominal' => $biaya_bbm, 
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM']])->get()[0]['nominal']),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm, 
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM Antar Kota']])->first()['nominal']),
+            array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam, 
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM Dalam Kota']])->first()['nominal']),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol, 
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Tol dalam kota']])->get()[0]['nominal']),
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Tol dalam kota']])->first()['nominal']),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol, 
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Tol Antar Kota']])->get()[0]['nominal']),
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Tol Antar Kota']])->first()['nominal']),
             array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir, 
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Parkir']])->get()[0]['nominal']),
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Parkir']])->first()['nominal']),
         );
         $biayaTambahan = array();
         for ($i=0; $i < count($biayaPerjalanan); $i++) { 
             $biayaTambahan[$i] = array('nama' => $biayaPerjalanan[$i]['b_nama'], 'nominal' => $biayaPerjalanan[$i]['b_nominal'],
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', $biayaPerjalanan[$i]['b_nama']]])->get()[0]['nominal']);
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', $biayaPerjalanan[$i]['b_nama']]])->first()['nominal']);
         }
         $pembulatan = ceil($query[0]['per_biaya']/50000)*50000;
         $selisihPem = $pembulatan - $query[0]['per_biaya'];
@@ -241,9 +247,12 @@ class InvoiceController extends Controller
             return (array)$value;
         }, $query);
         
+        $bbm_dalam = 0;
         for ($i=0; $i <count($per_kota) ; $i++) {
-            $tol[$i] = $per_kota[$i]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
-            $parkir[$i] = $per_kota[$i]['pk_parkir'];
+            $dur = $per_kota[$i]['pk_dur'];
+            $tol[$i] = $per_kota[$i]['pk_tol']*$dur;//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
+            $parkir[$i] = $per_kota[$i]['pk_parkir']*$dur;
+            $bbm_dalam += $per_kota[$i]['pk_bbm']*$dur;
         }
 
         for ($i=0; $i <count($query) ; $i++) { 
@@ -258,7 +267,8 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM', 'nominal' => $biaya_bbm),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
+            array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol),
             array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir),
@@ -391,10 +401,11 @@ class InvoiceController extends Controller
             $idPerjalanan = $perjalanan[$i]['per_id'];
             $per_kota = PerKota::where('pk_per', $idPerjalanan)->get();
             $biayaPerjalanan = Biaya::where('b_tp', $idPerjalanan)->get()->toArray();
-            
+            $bbm_dalam[$i] = 0;
             for ($j=0; $j <count($per_kota) ; $j++) {
                 $tol[$i][$j] = $per_kota[$j]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
                 $parkir[$i][$j] = $per_kota[$j]['pk_parkir'];
+                $bbm_dalam[$i] += $per_kota[$j]['pk_bbm'];
             }
     
             for ($j=0; $j <count($query) ; $j++) { 
@@ -411,19 +422,21 @@ class InvoiceController extends Controller
             $biaya_parkir = array_sum($parkir[$i]);
             $biaya_bbm = array_sum($bbm[$i]);
             $biaya[$i] = array(
-                array('nama' => 'Biaya BBM', 'nominal' => $biaya_bbm,
-                'pen' => $this->getFin($idPerjalanan, 'Biaya BBM')),
+                array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm,
+                'pen' => $this->getFin($idPerjalanan, 'Biaya BBM Antar Kota')),
                 array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol, 
                 'pen' => $this->getFin($idPerjalanan, 'Biaya Tol dalam kota')),
                 array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol,
                 'pen' => $this->getFin($idPerjalanan, 'Biaya Tol Antar Kota')),
                 array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir,
                 'pen' => $this->getFin($idPerjalanan, 'Biaya Parkir')),
+                array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $biaya_bbm,
+                'pen' => $this->getFin($idPerjalanan, 'Biaya BBM Dalam Kota')),
             );
             $biayaTambahan[$i] = array();
             for ($j=0; $j < count($biayaPerjalanan); $j++) { 
                 $biayaTambahan[$i][$j] = array('nama' => $biayaPerjalanan[$j]['b_nama'], 'nominal' => $biayaPerjalanan[$j]['b_nominal'], 
-                'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=',  $biayaPerjalanan[$j]['b_nama']]])->get()[0]['nominal']);
+                'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=',  $biayaPerjalanan[$j]['b_nama']]])->first()['nominal']);
                 $bt[$j] = $biayaTambahan[$i][$j]['nominal'];
             } 
             //$perjalanan[$i]['per_biaya'] = $perjalanan[$i]['per_biaya']-$perjalanan[$i]['per_pengembalian']; 
@@ -482,7 +495,7 @@ class InvoiceController extends Controller
     }
     public function getFin($id_per, $nama)
     {
-        return Penyelarasan::where([['pen_per','=', $id_per], ['nama_biaya','=', $nama]])->get()[0]['nominal'];
+        return Penyelarasan::where([['pen_per','=', $id_per], ['nama_biaya','=', $nama]])->first()['nominal'];
     }
     public function swap($var)
     {
