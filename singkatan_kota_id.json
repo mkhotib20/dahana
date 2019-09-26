@@ -1,0 +1,1998 @@
+[
+ {
+   "Singkatan": "AKK",
+   "Kota": "Aek Kanopan"
+ },
+ {
+   "Singkatan": "JKT",
+   "Kota": "Jakarta"
+ },
+ {
+   "Singkatan": "KJT",
+   "Kota": "Kertajati"
+ },
+ {
+   "Singkatan": "AGT",
+   "Kota": "Agats"
+ },
+ {
+   "Singkatan": "AFT",
+   "Kota": "Aifat"
+ },
+ {
+   "Singkatan": "AMS",
+   "Kota": "Aimas"
+ },
+ {
+   "Singkatan": "ARM",
+   "Kota": "Air Madidi"
+ },
+ {
+   "Singkatan": "AMB",
+   "Kota": "Ambon"
+ },
+ {
+   "Singkatan": "APN",
+   "Kota": "Ampana"
+ },
+ {
+   "Singkatan": "AMT",
+   "Kota": "Amuntai"
+ },
+ {
+   "Singkatan": "AMR",
+   "Kota": "Amurang"
+ },
+ {
+   "Singkatan": "ADL",
+   "Kota": "Andoolo"
+ },
+ {
+   "Singkatan": "AGM",
+   "Kota": "Arga Makmur"
+ },
+ {
+   "Singkatan": "ARS",
+   "Kota": "Arosuka"
+ },
+ {
+   "Singkatan": "ATB",
+   "Kota": "Atambua"
+ },
+ {
+   "Singkatan": "BAA",
+   "Kota": "Baa"
+ },
+ {
+   "Singkatan": "BJW",
+   "Kota": "Bajawa"
+ },
+ {
+   "Singkatan": "BLG",
+   "Kota": "Balige"
+ },
+ {
+   "Singkatan": "BPP",
+   "Kota": "Balikpapan"
+ },
+ {
+   "Singkatan": "BNA",
+   "Kota": "Banda Aceh"
+ },
+ {
+   "Singkatan": "BDL",
+   "Kota": "Bandar Lampung"
+ },
+ {
+   "Singkatan": "BSB",
+   "Kota": "Bandar Seri Bentan"
+ },
+ {
+   "Singkatan": "BDG",
+   "Kota": "Bandung"
+ },
+ {
+   "Singkatan": "BKL",
+   "Kota": "Bangkalan"
+ },
+ {
+   "Singkatan": "BKN",
+   "Kota": "Bangkinang"
+ },
+ {
+   "Singkatan": "BKO",
+   "Kota": "Bangko"
+ },
+ {
+   "Singkatan": "BLI",
+   "Kota": "Bangli"
+ },
+ {
+   "Singkatan": "BJR",
+   "Kota": "Banjar"
+ },
+ {
+   "Singkatan": "BJB",
+   "Kota": "Banjarbaru"
+ },
+ {
+   "Singkatan": "BJM",
+   "Kota": "Banjarmasin"
+ },
+ {
+   "Singkatan": "BNR",
+   "Kota": "Banjarnegara"
+ },
+ {
+   "Singkatan": "BAN",
+   "Kota": "Bantaeng"
+ },
+ {
+   "Singkatan": "BTL",
+   "Kota": "Bantul"
+ },
+ {
+   "Singkatan": "BYW",
+   "Kota": "Banyuwangi"
+ },
+ {
+   "Singkatan": "BAR",
+   "Kota": "Barru"
+ },
+ {
+   "Singkatan": "BTM",
+   "Kota": "Batam"
+ },
+ {
+   "Singkatan": "BTG",
+   "Kota": "Batang"
+ },
+ {
+   "Singkatan": "BTU",
+   "Kota": "Batu"
+ },
+ {
+   "Singkatan": "BLN",
+   "Kota": "Batulicin"
+ },
+ {
+   "Singkatan": "BTA",
+   "Kota": "Baturaja"
+ },
+ {
+   "Singkatan": "BSK",
+   "Kota": "Batusangkar"
+ },
+ {
+   "Singkatan": "BAU",
+   "Kota": "Bau-Bau"
+ },
+ {
+   "Singkatan": "BKS",
+   "Kota": "Bekasi"
+ },
+ {
+   "Singkatan": "BLS",
+   "Kota": "Bengkalis"
+ },
+ {
+   "Singkatan": "BEK",
+   "Kota": "Bengkayang"
+ },
+ {
+   "Singkatan": "BGL",
+   "Kota": "Bengkulu"
+ },
+ {
+   "Singkatan": "BEN",
+   "Kota": "Benteng"
+ },
+ {
+   "Singkatan": "BRB",
+   "Kota": "Barabai"
+ },
+ {
+   "Singkatan": "BIK",
+   "Kota": "Biak"
+ },
+ {
+   "Singkatan": "BIM",
+   "Kota": "Bima"
+ },
+ {
+   "Singkatan": "BNJ",
+   "Kota": "Binjai"
+ },
+ {
+   "Singkatan": "BHN",
+   "Kota": "Bintuhan"
+ },
+ {
+   "Singkatan": "BTI",
+   "Kota": "Bintuni"
+ },
+ {
+   "Singkatan": "BIR",
+   "Kota": "Bireuen"
+ },
+ {
+   "Singkatan": "BIT",
+   "Kota": "Bitung"
+ },
+ {
+   "Singkatan": "BBU",
+   "Kota": "Blambangan Umpu"
+ },
+ {
+   "Singkatan": "BKJ",
+   "Kota": "Blangkejeren"
+ },
+ {
+   "Singkatan": "BPD",
+   "Kota": "Blangpidie"
+ },
+ {
+   "Singkatan": "BLT",
+   "Kota": "Blitar"
+ },
+ {
+   "Singkatan": "BLA",
+   "Kota": "Blora"
+ },
+ {
+   "Singkatan": "BGR",
+   "Kota": "Bogor"
+ },
+ {
+   "Singkatan": "BJN",
+   "Kota": "Bojonegoro"
+ },
+ {
+   "Singkatan": "BLU",
+   "Kota": "Bolaang Uki"
+ },
+ {
+   "Singkatan": "BDW",
+   "Kota": "Bondowoso"
+ },
+ {
+   "Singkatan": "BON",
+   "Kota": "Bontang"
+ },
+ {
+   "Singkatan": "BRK",
+   "Kota": "Boroko"
+ },
+ {
+   "Singkatan": "BRG",
+   "Kota": "Borong"
+ },
+ {
+   "Singkatan": "BTW",
+   "Kota": "Botawa"
+ },
+ {
+   "Singkatan": "BYL",
+   "Kota": "Boyolali"
+ },
+ {
+   "Singkatan": "BBS",
+   "Kota": "Brebes"
+ },
+ {
+   "Singkatan": "BKT",
+   "Kota": "Bukittinggi"
+ },
+ {
+   "Singkatan": "BLK",
+   "Kota": "Bulukumba"
+ },
+ {
+   "Singkatan": "BGK",
+   "Kota": "Bungku"
+ },
+ {
+   "Singkatan": "BNT",
+   "Kota": "Buntok"
+ },
+ {
+   "Singkatan": "BUL",
+   "Kota": "Buol"
+ },
+ {
+   "Singkatan": "BNG",
+   "Kota": "Buranga"
+ },
+ {
+   "Singkatan": "BRM",
+   "Kota": "Burmeso"
+ },
+ {
+   "Singkatan": "CKG",
+   "Kota": "Cakung"
+ },
+ {
+   "Singkatan": "CAG",
+   "Kota": "Calang"
+ },
+ {
+   "Singkatan": "CMS",
+   "Kota": "Ciamis"
+ },
+ {
+   "Singkatan": "CJR",
+   "Kota": "Cianjur"
+ },
+ {
+   "Singkatan": "CBI",
+   "Kota": "Cibinong"
+ },
+ {
+   "Singkatan": "CKR",
+   "Kota": "Cikarang"
+ },
+ {
+   "Singkatan": "CLP",
+   "Kota": "Cilacap"
+ },
+ {
+   "Singkatan": "CLG",
+   "Kota": "Cilegon"
+ },
+ {
+   "Singkatan": "CMH",
+   "Kota": "Cimahi"
+ },
+ {
+   "Singkatan": "CPT",
+   "Kota": "Ciputat"
+ },
+ {
+   "Singkatan": "CBN",
+   "Kota": "Cirebon"
+ },
+ {
+   "Singkatan": "CRP",
+   "Kota": "Curup"
+ },
+ {
+   "Singkatan": "DKL",
+   "Kota": "Daik Lingga"
+ },
+ {
+   "Singkatan": "DTH",
+   "Kota": "Dataran Hunimoa"
+ },
+ {
+   "Singkatan": "DRH",
+   "Kota": "Dataran Hunipopu"
+ },
+ {
+   "Singkatan": "DMK",
+   "Kota": "Demak"
+ },
+ {
+   "Singkatan": "DPR",
+   "Kota": "Denpasar"
+ },
+ {
+   "Singkatan": "DPK",
+   "Kota": "Depok"
+ },
+ {
+   "Singkatan": "DOB",
+   "Kota": "Dobo"
+ },
+ {
+   "Singkatan": "DLS",
+   "Kota": "Dolok Sanggul"
+ },
+ {
+   "Singkatan": "DPU",
+   "Kota": "Dompu"
+ },
+ {
+   "Singkatan": "DGL",
+   "Kota": "Donggala"
+ },
+ {
+   "Singkatan": "DUM",
+   "Kota": "Dumai"
+ },
+ {
+   "Singkatan": "ELL",
+   "Kota": "Elelim"
+ },
+ {
+   "Singkatan": "ERT",
+   "Kota": "Enarotali"
+ },
+ {
+   "Singkatan": "END",
+   "Kota": "Ende"
+ },
+ {
+   "Singkatan": "ENR",
+   "Kota": "Enrekang"
+ },
+ {
+   "Singkatan": "FFK",
+   "Kota": "Fak Fak"
+ },
+ {
+   "Singkatan": "FEF",
+   "Kota": "Fef"
+ },
+ {
+   "Singkatan": "GRT",
+   "Kota": "Garut"
+ },
+ {
+   "Singkatan": "GDT",
+   "Kota": "Gedong Tataan"
+ },
+ {
+   "Singkatan": "GRG",
+   "Kota": "Gerung"
+ },
+ {
+   "Singkatan": "GIN",
+   "Kota": "Gianyar"
+ },
+ {
+   "Singkatan": "GTO",
+   "Kota": "Gorontalo"
+ },
+ {
+   "Singkatan": "GTO",
+   "Kota": "Gorontalo"
+ },
+ {
+   "Singkatan": "GSK",
+   "Kota": "Gresik"
+ },
+ {
+   "Singkatan": "GGP",
+   "Kota": "Grogol Petamburan"
+ },
+ {
+   "Singkatan": "GNS",
+   "Kota": "Gunung Sugih"
+ },
+ {
+   "Singkatan": "GNT",
+   "Kota": "Gunung Tua"
+ },
+ {
+   "Singkatan": "GST",
+   "Kota": "Gunungsitoli"
+ },
+ {
+   "Singkatan": "GST",
+   "Kota": "Gunungsitoli"
+ },
+ {
+   "Singkatan": "ILG",
+   "Kota": "Ilaga"
+ },
+ {
+   "Singkatan": "IDL",
+   "Kota": "Indralaya"
+ },
+ {
+   "Singkatan": "IDM",
+   "Kota": "Indramayu"
+ },
+ {
+   "Singkatan": "JLL",
+   "Kota": "Jailolo"
+ },
+ {
+   "Singkatan": "JMB",
+   "Kota": "Jambi"
+ },
+ {
+   "Singkatan": "JTH",
+   "Kota": "Jantho"
+ },
+ {
+   "Singkatan": "JAP",
+   "Kota": "Jayapura"
+ },
+ {
+   "Singkatan": "JAP",
+   "Kota": "Jayapura"
+ },
+ {
+   "Singkatan": "JMR",
+   "Kota": "Jember"
+ },
+ {
+   "Singkatan": "JNP",
+   "Kota": "Jeneponto"
+ },
+ {
+   "Singkatan": "JPA",
+   "Kota": "Jepara"
+ },
+ {
+   "Singkatan": "JBG",
+   "Kota": "Jombang"
+ },
+ {
+   "Singkatan": "KBJ",
+   "Kota": "Kabanjahe"
+ },
+ {
+   "Singkatan": "KFM",
+   "Kota": "Kefamenanu"
+ },
+ {
+   "Singkatan": "KMN",
+   "Kota": "Kaimana"
+ },
+ {
+   "Singkatan": "KJN",
+   "Kota": "Kajen"
+ },
+ {
+   "Singkatan": "KLB",
+   "Kota": "Kalabahi"
+ },
+ {
+   "Singkatan": "KLA",
+   "Kota": "Kalianda"
+ },
+ {
+   "Singkatan": "KGN",
+   "Kota": "Kandangan"
+ },
+ {
+   "Singkatan": "KNR",
+   "Kota": "Kanigoro"
+ },
+ {
+   "Singkatan": "KRB",
+   "Kota": "Karang Baru"
+ },
+ {
+   "Singkatan": "KRT",
+   "Kota": "Karang Tinggi"
+ },
+ {
+   "Singkatan": "KRG",
+   "Kota": "Karanganyar"
+ },
+ {
+   "Singkatan": "KRA",
+   "Kota": "Karangasem"
+ },
+ {
+   "Singkatan": "KWG",
+   "Kota": "Karawang"
+ },
+ {
+   "Singkatan": "KBG",
+   "Kota": "Karubaga"
+ },
+ {
+   "Singkatan": "KSN",
+   "Kota": "Kasongan"
+ },
+ {
+   "Singkatan": "KAG",
+   "Kota": "Kayu Agung"
+ },
+ {
+   "Singkatan": "KYB",
+   "Kota": "Kebayoran Baru"
+ },
+ {
+   "Singkatan": "KBM",
+   "Kota": "Kebumen"
+ },
+ {
+   "Singkatan": "KDR",
+   "Kota": "Kediri"
+ },
+ {
+   "Singkatan": "KDR",
+   "Kota": "Kediri"
+ },
+ {
+   "Singkatan": "KDL",
+   "Kota": "Kendal"
+ },
+ {
+   "Singkatan": "KDI",
+   "Kota": "Kendari"
+ },
+ {
+   "Singkatan": "KYM",
+   "Kota": "Kenyam"
+ },
+ {
+   "Singkatan": "KPH",
+   "Kota": "Kepahiang"
+ },
+ {
+   "Singkatan": "KPN",
+   "Kota": "Kepanjen"
+ },
+ {
+   "Singkatan": "KEP",
+   "Kota": "Kepi"
+ },
+ {
+   "Singkatan": "KSU",
+   "Kota": "Kepulauan Seribu Utara"
+ },
+ {
+   "Singkatan": "KTP",
+   "Kota": "Ketapang"
+ },
+ {
+   "Singkatan": "KGM",
+   "Kota": "Kigamani"
+ },
+ {
+   "Singkatan": "KIS",
+   "Kota": "Kisaran"
+ },
+ {
+   "Singkatan": "KLN",
+   "Kota": "Klaten"
+ },
+ {
+   "Singkatan": "KBA",
+   "Kota": "Koba"
+ },
+ {
+   "Singkatan": "KBK",
+   "Kota": "Kobakma"
+ },
+ {
+   "Singkatan": "KKA",
+   "Kota": "Kolaka"
+ },
+ {
+   "Singkatan": "KOT",
+   "Kota": "Kota Agung"
+ },
+ {
+   "Singkatan": "KPI",
+   "Kota": "Kota Pinang"
+ },
+ {
+   "Singkatan": "KBR",
+   "Kota": "Kotabaru"
+ },
+ {
+   "Singkatan": "KTB",
+   "Kota": "Kotabumi"
+ },
+ {
+   "Singkatan": "KTG",
+   "Kota": "Kotamobagu"
+ },
+ {
+   "Singkatan": "KTG",
+   "Kota": "Kotamubagu"
+ },
+ {
+   "Singkatan": "KRS",
+   "Kota": "Kraksaan"
+ },
+ {
+   "Singkatan": "KLK",
+   "Kota": "Kuala Kapuas"
+ },
+ {
+   "Singkatan": "KKN",
+   "Kota": "Kuala Kurun"
+ },
+ {
+   "Singkatan": "KLP",
+   "Kota": "Kuala Pembuang"
+ },
+ {
+   "Singkatan": "KLT",
+   "Kota": "Kuala Tungkal"
+ },
+ {
+   "Singkatan": "KDS",
+   "Kota": "Kudus"
+ },
+ {
+   "Singkatan": "KNG",
+   "Kota": "Kuningan"
+ },
+ {
+   "Singkatan": "KPG",
+   "Kota": "Kupang"
+ },
+ {
+   "Singkatan": "KPG",
+   "Kota": "Kupang"
+ },
+ {
+   "Singkatan": "KTN",
+   "Kota": "Kutacane"
+ },
+ {
+   "Singkatan": "KWD",
+   "Kota": "Kwandang"
+ },
+ {
+   "Singkatan": "LBJ",
+   "Kota": "Labuan Bajo"
+ },
+ {
+   "Singkatan": "LBA",
+   "Kota": "Labuha"
+ },
+ {
+   "Singkatan": "LHT",
+   "Kota": "Lahat"
+ },
+ {
+   "Singkatan": "LHM",
+   "Kota": "Lahomi"
+ },
+ {
+   "Singkatan": "LMG",
+   "Kota": "Lamongan"
+ },
+ {
+   "Singkatan": "LGS",
+   "Kota": "Langsa"
+ },
+ {
+   "Singkatan": "LGS",
+   "Kota": "Langsa"
+ },
+ {
+   "Singkatan": "LRT",
+   "Kota": "Larantuka"
+ },
+ {
+   "Singkatan": "LSS",
+   "Kota": "Lasusua"
+ },
+ {
+   "Singkatan": "LWL",
+   "Kota": "Lewoleba"
+ },
+ {
+   "Singkatan": "LSM",
+   "Kota": "Lhokseumawe"
+ },
+ {
+   "Singkatan": "LSK",
+   "Kota": "Lhoksukon"
+ },
+ {
+   "Singkatan": "LMP",
+   "Kota": "Lima Puluh"
+ },
+ {
+   "Singkatan": "LIW",
+   "Kota": "Liwa"
+ },
+ {
+   "Singkatan": "LTU",
+   "Kota": "Lotu"
+ },
+ {
+   "Singkatan": "LBB",
+   "Kota": "Lubuk Basung"
+ },
+ {
+   "Singkatan": "LLG",
+   "Kota": "Lubuk Linggau"
+ },
+ {
+   "Singkatan": "LBP",
+   "Kota": "Lubuk Pakam"
+ },
+ {
+   "Singkatan": "LBS",
+   "Kota": "Lubuk Sikaping"
+ },
+ {
+   "Singkatan": "LMJ",
+   "Kota": "Lumajang"
+ },
+ {
+   "Singkatan": "LWK",
+   "Kota": "Luwuk"
+ },
+ {
+   "Singkatan": "MAB",
+   "Kota": "Maba"
+ },
+ {
+   "Singkatan": "MAD",
+   "Kota": "Madiun"
+ },
+ {
+   "Singkatan": "MGG",
+   "Kota": "Magelang"
+ },
+ {
+   "Singkatan": "MGT",
+   "Kota": "Magetan"
+ },
+ {
+   "Singkatan": "MJL",
+   "Kota": "Majalengka"
+ },
+ {
+   "Singkatan": "MJN",
+   "Kota": "Majene"
+ },
+ {
+   "Singkatan": "MAK",
+   "Kota": "Makale"
+ },
+ {
+   "Singkatan": "MKS",
+   "Kota": "Makassar"
+ },
+ {
+   "Singkatan": "MLG",
+   "Kota": "Malang"
+ },
+ {
+   "Singkatan": "MLL",
+   "Kota": "Malili"
+ },
+ {
+   "Singkatan": "MLN",
+   "Kota": "Malinau"
+ },
+ {
+   "Singkatan": "MMS",
+   "Kota": "Mamasa"
+ },
+ {
+   "Singkatan": "MAM",
+   "Kota": "Mamuju"
+ },
+ {
+   "Singkatan": "MND",
+   "Kota": "Manado"
+ },
+ {
+   "Singkatan": "MGR",
+   "Kota": "Manggar"
+ },
+ {
+   "Singkatan": "MNA",
+   "Kota": "Manna"
+ },
+ {
+   "Singkatan": "MNK",
+   "Kota": "Manokwari"
+ },
+ {
+   "Singkatan": "MRH",
+   "Kota": "Marabahan"
+ },
+ {
+   "Singkatan": "MAR",
+   "Kota": "Marisa"
+ },
+ {
+   "Singkatan": "MRS",
+   "Kota": "Maros"
+ },
+ {
+   "Singkatan": "MTP",
+   "Kota": "Martapura"
+ },
+ {
+   "Singkatan": "MPR",
+   "Kota": "Martapura"
+ },
+ {
+   "Singkatan": "MSB",
+   "Kota": "Masamba"
+ },
+ {
+   "Singkatan": "MSH",
+   "Kota": "Masohi"
+ },
+ {
+   "Singkatan": "MTR",
+   "Kota": "Mataram"
+ },
+ {
+   "Singkatan": "MME",
+   "Kota": "Maumere"
+ },
+ {
+   "Singkatan": "MBY",
+   "Kota": "Mbay"
+ },
+ {
+   "Singkatan": "MDN",
+   "Kota": "Medan"
+ },
+ {
+   "Singkatan": "MJY",
+   "Kota": "Mejayan"
+ },
+ {
+   "Singkatan": "MGN",
+   "Kota": "Melongguane"
+ },
+ {
+   "Singkatan": "MPW",
+   "Kota": "Mempawah"
+ },
+ {
+   "Singkatan": "MGL",
+   "Kota": "Menggala"
+ },
+ {
+   "Singkatan": "MGW",
+   "Kota": "Mengwi"
+ },
+ {
+   "Singkatan": "MTK",
+   "Kota": "Mentok"
+ },
+ {
+   "Singkatan": "MRK",
+   "Kota": "Merauke"
+ },
+ {
+   "Singkatan": "MSJ",
+   "Kota": "Mesuji"
+ },
+ {
+   "Singkatan": "MET",
+   "Kota": "Metro"
+ },
+ {
+   "Singkatan": "MBO",
+   "Kota": "Meulaboh"
+ },
+ {
+   "Singkatan": "MRN",
+   "Kota": "Meureundu"
+ },
+ {
+   "Singkatan": "MJK",
+   "Kota": "Mojokerto"
+ },
+ {
+   "Singkatan": "MJK",
+   "Kota": "Mojokerto"
+ },
+ {
+   "Singkatan": "MTS",
+   "Kota": "Morotai Selatan"
+ },
+ {
+   "Singkatan": "MBN",
+   "Kota": "Muara Bulian"
+ },
+ {
+   "Singkatan": "MRB",
+   "Kota": "Muara Bungo"
+ },
+ {
+   "Singkatan": "MRE",
+   "Kota": "Muara Enim"
+ },
+ {
+   "Singkatan": "MSK",
+   "Kota": "Muara Sabak"
+ },
+ {
+   "Singkatan": "MRT",
+   "Kota": "Muara Tebo"
+ },
+ {
+   "Singkatan": "MTW",
+   "Kota": "Muara Teweh"
+ },
+ {
+   "Singkatan": "MBL",
+   "Kota": "Muarabeliti"
+ },
+ {
+   "Singkatan": "MRD",
+   "Kota": "Muaradua"
+ },
+ {
+   "Singkatan": "MRJ",
+   "Kota": "Muaro Sijunjung"
+ },
+ {
+   "Singkatan": "MKM",
+   "Kota": "Mukomuko"
+ },
+ {
+   "Singkatan": "MUL",
+   "Kota": "Mulia"
+ },
+ {
+   "Singkatan": "MKD",
+   "Kota": "Mungkid"
+ },
+ {
+   "Singkatan": "NAB",
+   "Kota": "Nabire"
+ },
+ {
+   "Singkatan": "NPM",
+   "Kota": "Nagari Parit Malintang"
+ },
+ {
+   "Singkatan": "NLA",
+   "Kota": "Namlea"
+ },
+ {
+   "Singkatan": "NMR",
+   "Kota": "Namrole"
+ },
+ {
+   "Singkatan": "NGB",
+   "Kota": "Nanga Bulik"
+ },
+ {
+   "Singkatan": "NGP",
+   "Kota": "Nanga Pinoh"
+ },
+ {
+   "Singkatan": "NGA",
+   "Kota": "Negara"
+ },
+ {
+   "Singkatan": "NBA",
+   "Kota": "Ngabang"
+ },
+ {
+   "Singkatan": "NPH",
+   "Kota": "Ngamprah"
+ },
+ {
+   "Singkatan": "NJK",
+   "Kota": "Nganjuk"
+ },
+ {
+   "Singkatan": "NGW",
+   "Kota": "Ngawi"
+ },
+ {
+   "Singkatan": "NNK",
+   "Kota": "Nunukan"
+ },
+ {
+   "Singkatan": "OSB",
+   "Kota": "Oksibil"
+ },
+ {
+   "Singkatan": "ODS",
+   "Kota": "Ondong Siau"
+ },
+ {
+   "Singkatan": "PCT",
+   "Kota": "Pacitan"
+ },
+ {
+   "Singkatan": "PAD",
+   "Kota": "Padang"
+ },
+ {
+   "Singkatan": "PDA",
+   "Kota": "Padang Aro"
+ },
+ {
+   "Singkatan": "PDP",
+   "Kota": "Padang Panjang"
+ },
+ {
+   "Singkatan": "PSP",
+   "Kota": "Padang Sidempuan"
+ },
+ {
+   "Singkatan": "PSP",
+   "Kota": "Padang Sidempuan"
+ },
+ {
+   "Singkatan": "PGA",
+   "Kota": "Pagar Alam"
+ },
+ {
+   "Singkatan": "PNN",
+   "Kota": "Painan"
+ },
+ {
+   "Singkatan": "PLK",
+   "Kota": "Palangkaraya"
+ },
+ {
+   "Singkatan": "PLP",
+   "Kota": "Palopo"
+ },
+ {
+   "Singkatan": "PLP",
+   "Kota": "Palopo"
+ },
+ {
+   "Singkatan": "PAL",
+   "Kota": "Palu"
+ },
+ {
+   "Singkatan": "PMK",
+   "Kota": "Pamekasan"
+ },
+ {
+   "Singkatan": "PDG",
+   "Kota": "Pandeglang"
+ },
+ {
+   "Singkatan": "PKJ",
+   "Kota": "Pangkajene"
+ },
+ {
+   "Singkatan": "PGP",
+   "Kota": "Pangkal Pinang"
+ },
+ {
+   "Singkatan": "PKB",
+   "Kota": "Pangkalan Balai"
+ },
+ {
+   "Singkatan": "PBU",
+   "Kota": "Pangkalan Bun"
+ },
+ {
+   "Singkatan": "PKK",
+   "Kota": "Pangkalan Kerinci"
+ },
+ {
+   "Singkatan": "PRR",
+   "Kota": "Pangururan"
+ },
+ {
+   "Singkatan": "PYB",
+   "Kota": "Panyabungan"
+ },
+ {
+   "Singkatan": "PRE",
+   "Kota": "Pare Pare"
+ },
+ {
+   "Singkatan": "PMN",
+   "Kota": "Pariaman"
+ },
+ {
+   "Singkatan": "PRG",
+   "Kota": "Parigi"
+ },
+ {
+   "Singkatan": "PRN",
+   "Kota": "Paringin"
+ },
+ {
+   "Singkatan": "PKY",
+   "Kota": "Pasangkayu"
+ },
+ {
+   "Singkatan": "PSW",
+   "Kota": "Pasar Wajo"
+ },
+ {
+   "Singkatan": "PRP",
+   "Kota": "Pasir Pengarairan"
+ },
+ {
+   "Singkatan": "PSR",
+   "Kota": "Pasuruan"
+ },
+ {
+   "Singkatan": "PSN",
+   "Kota": "Pasuruan"
+ },
+ {
+   "Singkatan": "PTI",
+   "Kota": "Pati"
+ },
+ {
+   "Singkatan": "PYH",
+   "Kota": "Payakumbuh"
+ },
+ {
+   "Singkatan": "PKL",
+   "Kota": "Pekalongan"
+ },
+ {
+   "Singkatan": "PBR",
+   "Kota": "Pekanbaru"
+ },
+ {
+   "Singkatan": "PLI",
+   "Kota": "Pelaihari"
+ },
+ {
+   "Singkatan": "PLG",
+   "Kota": "Pelembang"
+ },
+ {
+   "Singkatan": "PML",
+   "Kota": "Pemalang"
+ },
+ {
+   "Singkatan": "PMS",
+   "Kota": "Pematang Siantar"
+ },
+ {
+   "Singkatan": "PMS",
+   "Kota": "Pematang Siantar"
+ },
+ {
+   "Singkatan": "PNJ",
+   "Kota": "Penajam"
+ },
+ {
+   "Singkatan": "PIN",
+   "Kota": "Pinrang"
+ },
+ {
+   "Singkatan": "PLW",
+   "Kota": "Polewali"
+ },
+ {
+   "Singkatan": "PNG",
+   "Kota": "Ponorogo"
+ },
+ {
+   "Singkatan": "PTK",
+   "Kota": "Pontianak"
+ },
+ {
+   "Singkatan": "PSO",
+   "Kota": "Poso"
+ },
+ {
+   "Singkatan": "PBM",
+   "Kota": "Prabumulih"
+ },
+ {
+   "Singkatan": "PYA",
+   "Kota": "Praya"
+ },
+ {
+   "Singkatan": "PRW",
+   "Kota": "Pringsewu"
+ },
+ {
+   "Singkatan": "PBL",
+   "Kota": "Probolinggo"
+ },
+ {
+   "Singkatan": "PPS",
+   "Kota": "Pulang Pisau"
+ },
+ {
+   "Singkatan": "PLJ",
+   "Kota": "Pulau Punjung"
+ },
+ {
+   "Singkatan": "PBG",
+   "Kota": "Purbalingga"
+ },
+ {
+   "Singkatan": "PRC",
+   "Kota": "Puruk Cahu"
+ },
+ {
+   "Singkatan": "PWK",
+   "Kota": "Purwakarta"
+ },
+ {
+   "Singkatan": "PWD",
+   "Kota": "Purwodadi"
+ },
+ {
+   "Singkatan": "PWT",
+   "Kota": "Purwokerto"
+ },
+ {
+   "Singkatan": "PWR",
+   "Kota": "Purworejo"
+ },
+ {
+   "Singkatan": "PTS",
+   "Kota": "Putussibau"
+ },
+ {
+   "Singkatan": "RAH",
+   "Kota": "Raha"
+ },
+ {
+   "Singkatan": "RAN",
+   "Kota": "Ranai"
+ },
+ {
+   "Singkatan": "RKB",
+   "Kota": "Rangkas Bitung"
+ },
+ {
+   "Singkatan": "RTA",
+   "Kota": "Rantau"
+ },
+ {
+   "Singkatan": "RAP",
+   "Kota": "Rantau Prapat"
+ },
+ {
+   "Singkatan": "RTP",
+   "Kota": "Rantepao"
+ },
+ {
+   "Singkatan": "RAS",
+   "Kota": "Rasiei"
+ },
+ {
+   "Singkatan": "RTN",
+   "Kota": "Ratahan"
+ },
+ {
+   "Singkatan": "RBG",
+   "Kota": "Rembang"
+ },
+ {
+   "Singkatan": "RGT",
+   "Kota": "Rengat"
+ },
+ {
+   "Singkatan": "RMB",
+   "Kota": "Rumbia"
+ },
+ {
+   "Singkatan": "RTG",
+   "Kota": "Ruteng"
+ },
+ {
+   "Singkatan": "SAB",
+   "Kota": "Sabang"
+ },
+ {
+   "Singkatan": "SBB",
+   "Kota": "Sabu Barat"
+ },
+ {
+   "Singkatan": "SAL",
+   "Kota": "Salak"
+ },
+ {
+   "Singkatan": "SKN",
+   "Kota": "Salakan"
+ },
+ {
+   "Singkatan": "SLT",
+   "Kota": "Salatiga"
+ },
+ {
+   "Singkatan": "SMR",
+   "Kota": "Samarinda"
+ },
+ {
+   "Singkatan": "SBS",
+   "Kota": "Sambas"
+ },
+ {
+   "Singkatan": "SPG",
+   "Kota": "Sampang"
+ },
+ {
+   "Singkatan": "SPT",
+   "Kota": "Sampit"
+ },
+ {
+   "Singkatan": "SNN",
+   "Kota": "Sanana"
+ },
+ {
+   "Singkatan": "SGT",
+   "Kota": "Sanggatta"
+ },
+ {
+   "Singkatan": "SAG",
+   "Kota": "Sanggau"
+ },
+ {
+   "Singkatan": "SRK",
+   "Kota": "Sarilamak"
+ },
+ {
+   "Singkatan": "SMI",
+   "Kota": "Sarmi"
+ },
+ {
+   "Singkatan": "SRL",
+   "Kota": "Sarolangun"
+ },
+ {
+   "Singkatan": "SML",
+   "Kota": "Saumlaki"
+ },
+ {
+   "Singkatan": "SWL",
+   "Kota": "Sawahlunto"
+ },
+ {
+   "Singkatan": "SRH",
+   "Kota": "Sei Rampah"
+ },
+ {
+   "Singkatan": "SED",
+   "Kota": "Sekadau"
+ },
+ {
+   "Singkatan": "SKY",
+   "Kota": "Sekayu"
+ },
+ {
+   "Singkatan": "SEL",
+   "Kota": "Selong"
+ },
+ {
+   "Singkatan": "SMG",
+   "Kota": "Semarang"
+ },
+ {
+   "Singkatan": "SRP",
+   "Kota": "Semarapura"
+ },
+ {
+   "Singkatan": "SDW",
+   "Kota": "Sendawar"
+ },
+ {
+   "Singkatan": "SNT",
+   "Kota": "Sengeti"
+ },
+ {
+   "Singkatan": "SKG",
+   "Kota": "Sengkang"
+ },
+ {
+   "Singkatan": "SRG",
+   "Kota": "Serang"
+ },
+ {
+   "Singkatan": "SRG",
+   "Kota": "Serang"
+ },
+ {
+   "Singkatan": "SRU",
+   "Kota": "Serui"
+ },
+ {
+   "Singkatan": "SAK",
+   "Kota": "Siak Sriindrapura"
+ },
+ {
+   "Singkatan": "SBG",
+   "Kota": "Sibolga"
+ },
+ {
+   "Singkatan": "SBG",
+   "Kota": "Sibolga"
+ },
+ {
+   "Singkatan": "SBH",
+   "Kota": "Sibuhuan"
+ },
+ {
+   "Singkatan": "SDR",
+   "Kota": "Sidenreng"
+ },
+ {
+   "Singkatan": "SDK",
+   "Kota": "Sidikalang"
+ },
+ {
+   "Singkatan": "SDA",
+   "Kota": "Sidoarjo"
+ },
+ {
+   "Singkatan": "SGB",
+   "Kota": "Sigi Biromaru"
+ },
+ {
+   "Singkatan": "SGI",
+   "Kota": "Sigli"
+ },
+ {
+   "Singkatan": "SPE",
+   "Kota": "Simpang Empat"
+ },
+ {
+   "Singkatan": "STR",
+   "Kota": "Simpang Tiga Redelong"
+ },
+ {
+   "Singkatan": "SNB",
+   "Kota": "Sinabang"
+ },
+ {
+   "Singkatan": "SPA",
+   "Kota": "Singaparna"
+ },
+ {
+   "Singkatan": "SGR",
+   "Kota": "Singaraja"
+ },
+ {
+   "Singkatan": "SKW",
+   "Kota": "Singkawang"
+ },
+ {
+   "Singkatan": "SKL",
+   "Kota": "Singkil"
+ },
+ {
+   "Singkatan": "SNJ",
+   "Kota": "Sinjai"
+ },
+ {
+   "Singkatan": "STG",
+   "Kota": "Sintang"
+ },
+ {
+   "Singkatan": "SIT",
+   "Kota": "Situbondo"
+ },
+ {
+   "Singkatan": "SLW",
+   "Kota": "Slawi"
+ },
+ {
+   "Singkatan": "SMN",
+   "Kota": "Sleman"
+ },
+ {
+   "Singkatan": "SOE",
+   "Kota": "Soe"
+ },
+ {
+   "Singkatan": "SLK",
+   "Kota": "Solok"
+ },
+ {
+   "Singkatan": "SOR",
+   "Kota": "Soreang"
+ },
+ {
+   "Singkatan": "SRW",
+   "Kota": "Sorendiweri"
+ },
+ {
+   "Singkatan": "SON",
+   "Kota": "Sorong"
+ },
+ {
+   "Singkatan": "SGN",
+   "Kota": "Sragen"
+ },
+ {
+   "Singkatan": "STB",
+   "Kota": "Stabat"
+ },
+ {
+   "Singkatan": "SNG",
+   "Kota": "Subang"
+ },
+ {
+   "Singkatan": "SUS",
+   "Kota": "Subulussalam"
+ },
+ {
+   "Singkatan": "SGP",
+   "Kota": "Sugapa"
+ },
+ {
+   "Singkatan": "SKM",
+   "Kota": "Suka Makmue"
+ },
+ {
+   "Singkatan": "SBM",
+   "Kota": "Sukabumi"
+ },
+ {
+   "Singkatan": "SKB",
+   "Kota": "Sukabumi"
+ },
+ {
+   "Singkatan": "SDN",
+   "Kota": "Sukadana"
+ },
+ {
+   "Singkatan": "SKD",
+   "Kota": "Sukadane"
+ },
+ {
+   "Singkatan": "SKR",
+   "Kota": "Sukamara"
+ },
+ {
+   "Singkatan": "SKH",
+   "Kota": "Sukoharjo"
+ },
+ {
+   "Singkatan": "SBW",
+   "Kota": "Sumbawa Besar"
+ },
+ {
+   "Singkatan": "SBR",
+   "Kota": "Sumber"
+ },
+ {
+   "Singkatan": "SMD",
+   "Kota": "Sumedang"
+ },
+ {
+   "Singkatan": "SMP",
+   "Kota": "Sumenep"
+ },
+ {
+   "Singkatan": "SMH",
+   "Kota": "Sumohai"
+ },
+ {
+   "Singkatan": "SGL",
+   "Kota": "Sungai Liat"
+ },
+ {
+   "Singkatan": "SPN",
+   "Kota": "Sungai Penuh"
+ },
+ {
+   "Singkatan": "SPN",
+   "Kota": "Sungai Penuh"
+ },
+ {
+   "Singkatan": "SRY",
+   "Kota": "Sungai Raya"
+ },
+ {
+   "Singkatan": "SGM",
+   "Kota": "Sungguminasa"
+ },
+ {
+   "Singkatan": "SBY",
+   "Kota": "Surabaya"
+ },
+ {
+   "Singkatan": "SKT",
+   "Kota": "Surakarta"
+ },
+ {
+   "Singkatan": "SWW",
+   "Kota": "Suwawa"
+ },
+ {
+   "Singkatan": "TAB",
+   "Kota": "Tabanan"
+ },
+ {
+   "Singkatan": "THN",
+   "Kota": "Tahuna"
+ },
+ {
+   "Singkatan": "TAS",
+   "Kota": "Tais"
+ },
+ {
+   "Singkatan": "TKA",
+   "Kota": "Takalar"
+ },
+ {
+   "Singkatan": "TKN",
+   "Kota": "Takengon"
+ },
+ {
+   "Singkatan": "TLW",
+   "Kota": "Taliwang"
+ },
+ {
+   "Singkatan": "TAM",
+   "Kota": "Tambolaka"
+ },
+ {
+   "Singkatan": "TML",
+   "Kota": "Tamiang Layang"
+ },
+ {
+   "Singkatan": "TNA",
+   "Kota": "Tanah Abang"
+ },
+ {
+   "Singkatan": "TGT",
+   "Kota": "Tanah Grogot"
+ },
+ {
+   "Singkatan": "TMR",
+   "Kota": "Tanah Merah"
+ },
+ {
+   "Singkatan": "TNG",
+   "Kota": "Tangerang"
+ },
+ {
+   "Singkatan": "TJG",
+   "Kota": "Tanjung"
+ },
+ {
+   "Singkatan": "TJN",
+   "Kota": "Tanjung"
+ },
+ {
+   "Singkatan": "TJB",
+   "Kota": "Tanjung Balai"
+ },
+ {
+   "Singkatan": "TBK",
+   "Kota": "Tanjung Balai Karimun"
+ },
+ {
+   "Singkatan": "TDN",
+   "Kota": "Tanjung Pandan"
+ },
+ {
+   "Singkatan": "TPG",
+   "Kota": "Tanjung Pinang"
+ },
+ {
+   "Singkatan": "TJP",
+   "Kota": "Tanjung Priok"
+ },
+ {
+   "Singkatan": "TNR",
+   "Kota": "Tanjung Redeb"
+ },
+ {
+   "Singkatan": "TJS",
+   "Kota": "Tanjung Selor"
+ },
+ {
+   "Singkatan": "TTN",
+   "Kota": "Tapak Tuan"
+ },
+ {
+   "Singkatan": "TAR",
+   "Kota": "Tarakan"
+ },
+ {
+   "Singkatan": "TRP",
+   "Kota": "Tarempa"
+ },
+ {
+   "Singkatan": "TRT",
+   "Kota": "Tarutung"
+ },
+ {
+   "Singkatan": "TSM",
+   "Kota": "Tasikmalaya"
+ },
+ {
+   "Singkatan": "TTG",
+   "Kota": "Tebing Tinggi"
+ },
+ {
+   "Singkatan": "TBG",
+   "Kota": "Tebing Tinggi"
+ },
+ {
+   "Singkatan": "TBT",
+   "Kota": "Tebing Tinggi"
+ },
+ {
+   "Singkatan": "TGL",
+   "Kota": "Tegal"
+ },
+ {
+   "Singkatan": "TLD",
+   "Kota": "Teluk Dalam"
+ },
+ {
+   "Singkatan": "TLK",
+   "Kota": "Teluk Kuantan"
+ },
+ {
+   "Singkatan": "TMG",
+   "Kota": "Temanggung"
+ },
+ {
+   "Singkatan": "TBH",
+   "Kota": "Tembilahan"
+ },
+ {
+   "Singkatan": "TMB",
+   "Kota": "Teminabuan"
+ },
+ {
+   "Singkatan": "TRG",
+   "Kota": "Tenggarong"
+ },
+ {
+   "Singkatan": "TTE",
+   "Kota": "Ternate"
+ },
+ {
+   "Singkatan": "TKR",
+   "Kota": "Tiakur"
+ },
+ {
+   "Singkatan": "TDP",
+   "Kota": "Tideng Pale"
+ },
+ {
+   "Singkatan": "KTK",
+   "Kota": "Tidore"
+ },
+ {
+   "Singkatan": "TGR",
+   "Kota": "Tigaraksa"
+ },
+ {
+   "Singkatan": "TIG",
+   "Kota": "Tigi"
+ },
+ {
+   "Singkatan": "TMT",
+   "Kota": "Tilamuta"
+ },
+ {
+   "Singkatan": "TIM",
+   "Kota": "Timika"
+ },
+ {
+   "Singkatan": "TOM",
+   "Kota": "Tiom"
+ },
+ {
+   "Singkatan": "TOB",
+   "Kota": "Tobelo"
+ },
+ {
+   "Singkatan": "TBL",
+   "Kota": "Toboali"
+ },
+ {
+   "Singkatan": "TLI",
+   "Kota": "Toli Toli"
+ },
+ {
+   "Singkatan": "TMH",
+   "Kota": "Tomohon"
+ },
+ {
+   "Singkatan": "TNN",
+   "Kota": "Tondano"
+ },
+ {
+   "Singkatan": "TRK",
+   "Kota": "Trenggalek"
+ },
+ {
+   "Singkatan": "TUL",
+   "Kota": "Tual"
+ },
+ {
+   "Singkatan": "TUL",
+   "Kota": "Tual"
+ },
+ {
+   "Singkatan": "TPT",
+   "Kota": "Tuapejat"
+ },
+ {
+   "Singkatan": "TBN",
+   "Kota": "Tuban"
+ },
+ {
+   "Singkatan": "TUB",
+   "Kota": "Tubei"
+ },
+ {
+   "Singkatan": "TWG",
+   "Kota": "Tulang Bawang Tengah"
+ },
+ {
+   "Singkatan": "TLG",
+   "Kota": "Tulungagung"
+ },
+ {
+   "Singkatan": "TTY",
+   "Kota": "Tutuyan"
+ },
+ {
+   "Singkatan": "UJT",
+   "Kota": "Ujung Tanjung"
+ },
+ {
+   "Singkatan": "UNH",
+   "Kota": "Unaaha"
+ },
+ {
+   "Singkatan": "UNR",
+   "Kota": "Ungaran"
+ },
+ {
+   "Singkatan": "WBL",
+   "Kota": "Waibakul"
+ },
+ {
+   "Singkatan": "WKB",
+   "Kota": "Waikabubak"
+ },
+ {
+   "Singkatan": "WGP",
+   "Kota": "Waingapu"
+ },
+ {
+   "Singkatan": "WAS",
+   "Kota": "Waisai"
+ },
+ {
+   "Singkatan": "WAM",
+   "Kota": "Wamena"
+ },
+ {
+   "Singkatan": "WGD",
+   "Kota": "Wanggudu"
+ },
+ {
+   "Singkatan": "WGW",
+   "Kota": "Wangi Wangi"
+ },
+ {
+   "Singkatan": "WRS",
+   "Kota": "Waris"
+ },
+ {
+   "Singkatan": "WTP",
+   "Kota": "Watampone"
+ },
+ {
+   "Singkatan": "WNS",
+   "Kota": "Watan Soppeng"
+ },
+ {
+   "Singkatan": "WAT",
+   "Kota": "Wates"
+ },
+ {
+   "Singkatan": "WED",
+   "Kota": "Weda"
+ },
+ {
+   "Singkatan": "WHO",
+   "Kota": "Woha"
+ },
+ {
+   "Singkatan": "WNG",
+   "Kota": "Wonogiri"
+ },
+ {
+   "Singkatan": "WNO",
+   "Kota": "Wonosari"
+ },
+ {
+   "Singkatan": "WSB",
+   "Kota": "Wonosobo"
+ },
+ {
+   "Singkatan": "YYK",
+   "Kota": "Yogyakarta"
+ }
+]
