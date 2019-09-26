@@ -15,8 +15,8 @@ $.ajax({
   if (saldo >= limit) {
     $('#warn').html('<div class="bahaya" ><center><b>Penggunaan Biaya perjalanan dinas telah mencapai batas anggaran</b></center></div>')
   }
-  else if(saldo/limit*100 >= 70 ){
-    $('#warn').html('<div class="peringatan" ><center><b>Penggunaan biaya perjalanan dinas telah mencapai 80% dari anggaran</b></center></div>')
+  else if(saldo/limit*100 >= 65 ){
+    $('#warn').html('<div class="peringatan" ><center><b>Penggunaan biaya perjalanan dinas telah mencapai 65% dari anggaran</b></center></div>')
     
   }
   
