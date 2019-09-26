@@ -139,8 +139,8 @@
             </tr>
             <?php } ?>
             <tr style="padding: 10px">
-                <td style="text-align: center" colspan="12"><b>Total</b></td>
-                <td  style="text-align: right; padding: 10px" colspan="2"><span class="float-left">Rp. </span> {{number_format($sumtotal, '0', ',', '.') }}</td>
+                <td style="text-align: center" colspan="13"><b>Total</b></td>
+                <td  style="text-align: right; padding: 10px" colspan="3"><span class="float-left">Rp. </span> {{number_format($sumtotal, '0', ',', '.') }}</td>
             </tr>
         </tbody>
     </table>

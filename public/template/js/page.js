@@ -664,10 +664,12 @@ $("#per_jarak_n").on('input', function(){
         nm = i+1  
         sumdur += parseInt($('#dur_'+nm).val())    
       }
+      var sumBbmDalam = 0
       
       for (let i = 0; i < indexp; i++) {
         var idx = parseInt(i)+1
         sumbbm += parseInt($('#bbm_'+idx).val().replace('Rp ','').replace(/ /g,''))|| 0
+        sumBbmDalam += parseInt($('#bbm_dalam_'+idx).val().replace('Rp ','').replace(/ /g,''))|| 0
         sumparkir += parseInt($('#parkir_'+idx).val().replace('Rp ','').replace(/ /g,''))|| 0
         sumtol += parseInt($('#tol_'+idx).val().replace('Rp ','').replace(/ /g,''))|| 0
         sumextol += parseInt($('#extol_'+idx).val().replace('Rp ','').replace(/ /g,''))|| 0
@@ -677,7 +679,8 @@ $("#per_jarak_n").on('input', function(){
       } 
       $('#b_nominal_1').val(sopir*sumdur)
       rincian = [
-        {nama: 'Tarif BBM',nominal: formatRupiah(sumbbm+sumbbmpl)}, 
+        {nama: 'Tarif BBM Antar Kota',nominal: formatRupiah(sumbbm+sumbbmpl)}, 
+        {nama: 'Tarif BBM Dalam Kota',nominal: formatRupiah(sumBbmDalam)}, 
         {nama: 'Tarif Tol', nominal: formatRupiah(sumextol+sumextolpl)},
         {nama: 'Tarif Tol Dalam Kota', nominal: formatRupiah(sumtol)},
         {nama: 'Tarif Parkir', nominal: formatRupiah(sumparkir)}, 

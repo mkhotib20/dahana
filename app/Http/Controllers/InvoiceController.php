@@ -117,8 +117,8 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
             array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol),
             array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir),
@@ -187,10 +187,10 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm, 
-            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM Antar Kota']])->first()['nominal']),
             array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam, 
             'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM Dalam Kota']])->first()['nominal']),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm, 
+            'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya BBM Antar Kota']])->first()['nominal']),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol, 
             'pen' => Penyelarasan::where([['pen_per','=', $idPerjalanan], ['nama_biaya','=', 'Biaya Tol dalam kota']])->first()['nominal']),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol, 
@@ -267,8 +267,8 @@ class InvoiceController extends Controller
         $biaya_bbm = array_sum($bbm);
         $biaya_parkir = array_sum($parkir);
         $biaya = array(
-            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
             array('nama' => 'Biaya BBM Dalam Kota', 'nominal' => $bbm_dalam),
+            array('nama' => 'Biaya BBM Antar Kota', 'nominal' => $biaya_bbm),
             array('nama' => 'Biaya Tol dalam kota', 'nominal' => $biaya_tol),
             array('nama' => 'Biaya Tol Antar Kota', 'nominal' => $biaya_extol),
             array('nama' => 'Biaya Parkir', 'nominal' => $biaya_parkir),
