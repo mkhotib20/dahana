@@ -41,7 +41,7 @@
         <div id="warn"></div>
     
     <div id="wrapper">
-
+{{-- {{$ada}} --}}
             <div class="left-side-menu">
 
                 <div class="slimscroll-menu">

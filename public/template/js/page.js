@@ -690,11 +690,11 @@ $("#per_jarak_n").on('input', function(){
         sumb = parseInt($('#b_nominal_'+idx).val().replace('Rp ','').replace(/ /g,'')) || 0
         sumbt += parseInt($('#b_nominal_'+idx).val().replace('Rp ','').replace(/ /g,'')) || 0
         if (sumb!=0) {
-          rincian[i+4] = {nama: $('#b_nama_'+idx).val(), nominal: formatRupiah(sumb)} 
+          rincian[i+5] = {nama: $('#b_nama_'+idx).val(), nominal: formatRupiah(sumb)} 
         }
       }
      
-      fullPrice = sumtol+sumbbm+sumbt+sumparkir+sumextol+sumpl
+      fullPrice = sumbt+sumbbm+sumbbmpl+sumBbmDalam+sumextol+sumextolpl+sumtol+sumparkir
       fullPrice =  Math.round(fullPrice/1000)*1000
       
       saldo = parseInt(saldo) || 0

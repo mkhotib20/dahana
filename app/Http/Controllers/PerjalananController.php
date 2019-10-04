@@ -117,20 +117,34 @@ class PerjalananController extends Controller
         }
         echo json_encode($arr);
     }
-    public function tambah()
+    public function getPerNo()
     {
-        $max_no = Perjalanan::max('per_no');
-        $no = substr($max_no, 4, 4)+1;
-        $max_year = substr($max_no, 0, 4);
+        $old_no = Perjalanan::max('per_no');
+        $max_year = substr($old_no, 0, 4);
         $year = date('Y');
+        $no = substr($old_no, 4, 4)+1;
         if ($max_year!=$year) {
             $per_no = date('Y').'0000'+1;
         }
         else{
             $per_no = date('Y').'0000'+$no;
         }
-        
-
+        return $per_no;
+    }
+    public function tambah()
+    {
+        // $max_no = Perjalanan::max('per_no');
+        // echo $this->getPerNo($max_no);
+        // $no = substr($max_no, 4, 4)+1;
+        // $max_year = substr($max_no, 0, 4);
+        // $year = date('Y');
+        // if ($max_year!=$year) {
+        //     $per_no = date('Y').'0000'+1;
+        // }
+        // else{
+        //     $per_no = date('Y').'0000'+$no;
+        // }
+        $per_no = $this->getPerNo();
         $data = array(
             'tj_kota_1' => '0',
             'per_id' => '',
@@ -500,7 +514,8 @@ class PerjalananController extends Controller
                     $this->storeBiaya($b_nama[$i], $per_id, $b_uang);
                 }
             }
-            $per_no = $request->per_no;
+            // $per_no = $request->per_no;
+            $per_no = $this->getPerNo();
             $per_mobil = Kendaraan::find($request->per_kendaraan)->ken_merk;
             $ken_nopol = Kendaraan::find($request->per_kendaraan)->ken_nopol;
             $kar_id = Karyawan::find($request->per_karyawan);
