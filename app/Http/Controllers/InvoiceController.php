@@ -100,9 +100,10 @@ class InvoiceController extends Controller
         }, $query);
         
         for ($i=0; $i <count($per_kota) ; $i++) {
-            $tol[$i] = $per_kota[$i]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
-            $parkir[$i] = $per_kota[$i]['pk_parkir'];
-            $bbm_dalam += ($per_kota[$i]['pk_bbm']);
+            $dur = $per_kota[$i]['pk_dur'];
+            $tol[$i] = $per_kota[$i]['pk_tol']*$dur;//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
+            $parkir[$i] = $per_kota[$i]['pk_parkir']*$dur;
+            $bbm_dalam += ($per_kota[$i]['pk_bbm'])*$dur;
         }
 
         for ($i=0; $i <count($query) ; $i++) { 
@@ -170,9 +171,10 @@ class InvoiceController extends Controller
         }, $query);
         $bbm_dalam = 0;
         for ($i=0; $i <count($per_kota) ; $i++) {
-            $tol[$i] = $per_kota[$i]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
-            $parkir[$i] = $per_kota[$i]['pk_parkir'];
-            $bbm_dalam += $per_kota[$i]['pk_bbm'];
+            $dur = $per_kota[$i]['pk_dur'];
+            $tol[$i] = $per_kota[$i]['pk_tol']*$dur;//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
+            $parkir[$i] = $per_kota[$i]['pk_parkir']*$dur;
+            $bbm_dalam += $per_kota[$i]['pk_bbm']*$dur;
         }
 
         for ($i=0; $i <count($query) ; $i++) { 
@@ -403,9 +405,10 @@ class InvoiceController extends Controller
             $biayaPerjalanan = Biaya::where('b_tp', $idPerjalanan)->get()->toArray();
             $bbm_dalam[$i] = 0;
             for ($j=0; $j <count($per_kota) ; $j++) {
-                $tol[$i][$j] = $per_kota[$j]['pk_tol'];//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
-                $parkir[$i][$j] = $per_kota[$j]['pk_parkir'];
-                $bbm_dalam[$i] += $per_kota[$j]['pk_bbm'];
+                $dur = $per_kota[$j]['pk_dur'];
+                $tol[$i][$j] = $per_kota[$j]['pk_tol']*$dur;//$this->getTol( $idPerjalanan, $query[$i]['tj_kota_2']);
+                $parkir[$i][$j] = $per_kota[$j]['pk_parkir']*$dur;
+                $bbm_dalam[$i] += $per_kota[$j]['pk_bbm']*$dur;
             }
     
             for ($j=0; $j <count($query) ; $j++) { 
