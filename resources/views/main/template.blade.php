@@ -41,7 +41,7 @@
         <div id="warn"></div>
     
     <div id="wrapper">
-{{-- {{$ada}} --}}
+
             <div class="left-side-menu">
 
                 <div class="slimscroll-menu">
@@ -150,7 +150,8 @@
                                     <i class="fe fe-money"></i>
                                     <span> Anggaran Perjalanan Dinas </span>
                                 </a>
-                            </li><li>
+                            </li>
+							<li>
                                 <a href="{{url('ttd')}} ">
                                     <i class="fe fe-users"></i>
                                     <span> Tandatangan </span>

@@ -133,6 +133,10 @@
             <td>{{$tgl_start}} </td>
           </tr>
           <tr>
+            <td>Tanggal Kembali</td>
+            <td>{{$tgl_kembali}} </td>
+          </tr>
+          <tr>
             <td>Kategori kendaraan  </td>
             <td>{{$mob_kat}} </td>
           </tr>

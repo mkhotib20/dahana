@@ -35,6 +35,7 @@
                         <!-- end page title --> 
 
                         <div class="row">
+						@if(Auth::user()->role==0 || Auth::user()->role==3)
                             <div class="col-md-6">
                                 <div class="card widget-flat">
                                     <div class="card-body container">
@@ -52,6 +53,7 @@
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card-->
                             </div>
+							@endif
                             <div class="col-md-6">
                                 <div class="card widget-flat">
                                     <div class="card-body container">

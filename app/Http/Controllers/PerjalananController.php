@@ -69,6 +69,21 @@ class PerjalananController extends Controller
         $data['uk'] = UnitKerja::all();
         return view('main.perjalanan')->with($data);
     }
+	
+    public function getPerNo()
+    {
+        $old_no = Perjalanan::max('per_no');
+        $max_year = substr($old_no, 0, 4);
+        $year = date('Y');
+        $no = substr($old_no, 4, 4)+1;
+        if ($max_year!=$year) {
+            $per_no = date('Y').'0000'+1;
+        }
+        else{
+            $per_no = date('Y').'0000'+$no;
+        }
+        return $per_no;
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -117,34 +132,21 @@ class PerjalananController extends Controller
         }
         echo json_encode($arr);
     }
-    public function getPerNo()
+    public function tambah()
     {
-        $old_no = Perjalanan::max('per_no');
-        $max_year = substr($old_no, 0, 4);
+        /*$max_no = Perjalanan::max('per_no');
+        $no = substr($max_no, 4, 4)+1;
+        $max_year = substr($max_no, 0, 4);
         $year = date('Y');
-        $no = substr($old_no, 4, 4)+1;
         if ($max_year!=$year) {
             $per_no = date('Y').'0000'+1;
         }
         else{
             $per_no = date('Y').'0000'+$no;
-        }
-        return $per_no;
-    }
-    public function tambah()
-    {
-        // $max_no = Perjalanan::max('per_no');
-        // echo $this->getPerNo($max_no);
-        // $no = substr($max_no, 4, 4)+1;
-        // $max_year = substr($max_no, 0, 4);
-        // $year = date('Y');
-        // if ($max_year!=$year) {
-        //     $per_no = date('Y').'0000'+1;
-        // }
-        // else{
-        //     $per_no = date('Y').'0000'+$no;
-        // }
-        $per_no = $this->getPerNo();
+        }*/
+		$per_no = $this->getPerNo();
+        
+
         $data = array(
             'tj_kota_1' => '0',
             'per_id' => '',
@@ -514,8 +516,8 @@ class PerjalananController extends Controller
                     $this->storeBiaya($b_nama[$i], $per_id, $b_uang);
                 }
             }
-            // $per_no = $request->per_no;
-            $per_no = $this->getPerNo();
+            //$per_no = $request->per_no;
+			$per_no = $this->getPerNo();
             $per_mobil = Kendaraan::find($request->per_kendaraan)->ken_merk;
             $ken_nopol = Kendaraan::find($request->per_kendaraan)->ken_nopol;
             $kar_id = Karyawan::find($request->per_karyawan);
@@ -559,7 +561,7 @@ class PerjalananController extends Controller
                 $asal = Kota::find($tj_kota_1)->kt_nama;
                 try {
                     if ($kar_email!='') {
-                        // $this->sendEmail($per_tujuan, $kar_email, $per_mobil, $kar_nama, $per_jam, $this->convDate($per_tgl_start), $per_driver, $per_kep, $ken_nopol, $asal);
+                        $this->sendEmail($per_tujuan, $kar_email, $per_mobil, $kar_nama, $per_jam, $this->convDate($per_tgl_start), $per_driver, $per_kep, $ken_nopol, $asal);
                     }
                 } catch (\Throwable $th) {
                     Session::flash('sukses','Menyimpan data berhasil');

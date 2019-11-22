@@ -43,7 +43,7 @@
     border: 1px solid black;
 }
 .spacer{
-    margin-top: 45px;
+    margin-top: 85px;
 }
 .float-left{
     float: left;
@@ -55,9 +55,8 @@
         <img class="left" src="{{url('public/icons/logor.png')}} " alt="">
         <img class="right" src="{{url('public/icons/iso.png')}} " alt="">
     </div>
-    <center><b><p>LAPORAN PERJALANAN DINAS KORPORASI</p></b>
-    <p>Tanggal : {{$range}} 
-	<!--<br>Departemen : {{$dep}} --></p>
+    <center><b><p>LAPORAN PERJALANAN DINAS</p></b>
+    <p>Tanggal : {{$range}} <br>Departemen : {{$dep}} </p>
     </center>
     <table class="table">
         <thead>
@@ -68,18 +67,16 @@
                 <th rowspan="2">Tgl Perjalanan</th>
                 <th style="width: 6%" rowspan="2">Departemen</th>
                 <th rowspan="2">Kota Tujuan </th>
-                <th rowspan="2">Melayani</th> 
+                <th rowspan="2">Melayani</th>
                 <th rowspan="2">Kendaraan </th>
                 <th rowspan="2">Pengemudi</th>
-                <th colspan="2">Biaya BBM</th>
+                <th rowspan="2">Biaya BBM</th>
                 <th colspan="2">Biaya Tol</th>
                 <th rowspan="2">Biaya Parkir</th>
                 <th rowspan="2">Biaya Tambahan</th>
                 <th rowspan="2">Jumlah</th>
             </tr>
             <tr>
-               <th>Dalam</th>
-                <th>Luar</th>
                 <th>Dalam</th>
                 <th>Luar</th>
             </tr>
@@ -99,7 +96,7 @@
                 <td> {{$value['per_tgl_start']}}</td>
                 <td>{{$tgl_per[$i]}}</td>
                 <td> {{$value['uk_nama']}}</td>
-               <td>
+                <td>
 				{{$dari[$i]}}
 				<?php
 				for($j=0; $j < count($tujuan_per[$i]); $j++)
@@ -107,24 +104,16 @@
 					$tmp = ($j>0 ? $tujuan_per[$i][$j] : '');
 					if($tujuan_per[$i][$j] != '' || $tujuan_per[$i][$j] != $tmp){
 						echo ' - '.$tujuan_per[$i][$j];
-						
-							
 					}
 					
 				}?>
 
 				
 				</td>
-                <td>{{$value['kar_nama']}}</td> 
+                <td>{{$value['kar_nama']}}</td>
                 <td><b>{{$value['ken_merk']}}</b> <br> <small>{{$value['ken_nopol']}}</small></td>
                 <td>{{$value['dr_nama']}}</td>
-                @if($biaya[$i][4]['pen']==0)
-                
-			<td colspan="2"> {{number_format($biaya[$i][0]['pen'], '0', ',', '.')}} </td>
-                @else
-                <td>{{number_format($biaya[$i][4]['pen'], '0', ',', '.')}} </td>
                 <td>{{number_format($biaya[$i][0]['pen'], '0', ',', '.')}} </td>
-                @endif
                 <td>{{number_format($biaya[$i][1]['pen'], '0', ',', '.')}} </td>
                 <td>{{number_format($biaya[$i][2]['pen'], '0', ',', '.')}} </td>
                 <td>{{number_format($biaya[$i][3]['pen'], '0', ',', '.')}} </td>
@@ -141,8 +130,8 @@
             </tr>
             <?php } ?>
             <tr style="padding: 10px">
-                <td style="text-align: center" colspan="13"><b>Total</b></td>
-                <td  style="text-align: right; padding: 10px" colspan="3"><span class="float-left">Rp. </span> {{number_format($sumtotal, '0', ',', '.') }}</td>
+                <td style="text-align: center" colspan="11"><b>Total</b></td>
+                <td  style="text-align: right; padding: 10px" colspan="2"><span class="float-left">Rp. </span> {{number_format($sumtotal, '0', ',', '.') }}</td>
             </tr>
         </tbody>
     </table>

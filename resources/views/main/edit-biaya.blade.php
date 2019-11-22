@@ -114,6 +114,8 @@
                                                                                                     <small>Durasi (hari)</small>
                                                                                                 </div>
                                                                                                 <div class="col-md-4">
+																								                                                                                                    <input type="text"  class="form-control bbm_old" name="pk_bbm[]" placeholder="Biaya BBM" id="bbm_dalam_1"  type="text">
+
                                                                                                     <input type="text" value="0" class="form-control tol" placeholder="Biaya Tol dalam kota" id="tol_1" name="kt_tol[]" type="text">
                                                                                                     <small>Biaya tol dalam kota</small>
                                                                                                 </div>
