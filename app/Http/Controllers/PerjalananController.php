@@ -254,20 +254,20 @@ class PerjalananController extends Controller
     }
     public function storeBiayaUpd($b_nama, $b_tp, $b_nominal)
     {
-         $b_nama = ucfirst($b_nama);
+        $b_nama = ucfirst($b_nama);
+        // dd($b_nama);
         $by = Biaya::where([['b_tp', '=', $b_tp],['b_nama', '=',  $b_nama]]);
         if (count($by->get())>0) {
-            $newSaku = $by->first()->b_nominal+$b_nominal;
-            Biaya::updateOrCreate(
-                ['b_tp' => $b_tp, 'b_nama' => $b_nama],
-                ['b_tp' => $b_tp, 'b_nama' => $b_nama, 'b_nominal' => $newSaku]
-            );
+            $newSaku = $by->first();
+            $newSaku->b_nominal += $b_nominal;
+            $newSaku->save();
+            // Biaya::updateOrCreate(
+            //     ['b_tp' => $b_tp, 'b_nama' => $b_nama],
+            //     ['b_tp' => $b_tp, 'b_nama' => $b_nama, 'b_nominal' => $newSaku]
+            // );
         }
         else{
-            Biaya::updateOrCreate(
-                ['b_tp' => $b_tp, 'b_nama' => $b_nama],
-                ['b_tp' => $b_tp, 'b_nama' => $b_nama, 'b_nominal' => $b_nominal]
-            );
+            Biaya::create(['b_tp' => $b_tp, 'b_nama' => $b_nama, 'b_nominal' => $b_nominal]);
         }
     }
     public function storeBiaya($b_nama, $b_tp, $b_nominal)
@@ -287,7 +287,7 @@ class PerjalananController extends Controller
     public function storePK($pk_per, $pk_kt, $dur, $pk_pr, $pk_tol, $pk_bbm)
     {
         $saku = Saku::find(1)->saku;
-        $saku = $dur*$saku;
+        $saku = ($pk_kt!=0)?$dur*$saku:0;
         PerKota::create(
             ['pk_per'=>$pk_per, 'pk_kt'=>$pk_kt, 'pk_dur' => $dur, 'pk_saku' => $saku, 'pk_parkir' =>$pk_pr, 'pk_tol' => $pk_tol, 'pk_bbm' =>$pk_bbm]
         );
@@ -357,24 +357,24 @@ class PerjalananController extends Controller
     {
         $lastTP = TujuanPerjalanan::where('tp_per', $per_id);
         $cp = $lastTP->max('tp_cp');
-        $curPer = Perjalanan::find($per_id);        
-        $lastTpCp = TujuanPerjalanan::where([['tp_per','=', $per_id], ['tp_cp','=', $cp]])->first();
+        $curTP = TujuanPerjalanan::where([['tp_per','=', $per_id], ['tp_cp','=', $cp]]);
+        $lastTpCp = $curTP->first();
+        $curPer = Perjalanan::find($per_id); 
         $bbm = $lastTpCp->tp_bbm;
-        $tj = $lastTpCp->tp_tj;
-        $extol = Tujuan::find($tj)->tj_tol;
-        Saldo::create(['nominal' => ($curPer->per_biaya*-1)]);
+        $extol = $lastTpCp->tp_tol;
         $biaya_baru = ($curPer->per_biaya)-$bbm-$extol;
         $curPer->per_biaya= $biaya_baru;
+        // dd($biaya_baru, $curPer->per_biaya, $lastTpCp);
+
+        Saldo::create(['nominal' => ($curPer->per_biaya*-1)]);        
         $curPer->save();
-        TujuanPerjalanan::where([['tp_per','=', $per_id], ['tp_cp','=', $cp]])->delete();
+        $curTP->delete();
+        // return $newBiaya = $biaya_baru;
     }
-    public function updateBiaya(Request $request)
+    public function saveBiaya($per_id, $b_nama, $b_nominal, $request)
     {
-        $per_id = $request->per_id;
         $perj = Perjalanan::find($per_id);
         $per_no = $perj->per_no;
-        $b_nama = $_POST['b_nama'];
-        $b_nominal = $_POST['b_nominal'];
         for ($i=0; $i <count($b_nama) ; $i++) { 
             $b_uang = str_replace(' ','',str_replace('Rp','', $b_nominal[$i]));
             if ($b_uang!='' || $b_nama[$i] != '-') {
@@ -384,6 +384,7 @@ class PerjalananController extends Controller
         $bAwal = $perj->per_biaya;
         $per_biaya = $bAwal+$request->per_biaya;
         $perj->per_biaya = $per_biaya;
+        // dd($per_biaya, $request->per_biaya);
         if ($perj->save()) {
             Saldo::create(['nominal' => ($per_biaya)]);
             Session::flash('sukses','Menyimpan data berhasil');
@@ -391,11 +392,27 @@ class PerjalananController extends Controller
             $per_biaya = $request->per_biaya;
             $this->sendNotif($per_biaya);
              LogController::storeLog("Tambah biaya perjalanan no perjalanan : ".$per_no);
-            return redirect()->route('perjalanan.index')->with('success', 'Post tersimpan'); 
+            return true; 
+        }
+        else{
+            dd($per_biaya);
+            return false;
+        }
+    }
+    public function updateBiaya(Request $request)
+    {
+        $per_id = $request->per_id;
+        // $perj = Perjalanan::find($per_id);
+        // $per_no = $perj->per_no;
+        // dd($per_id);
+        $b_nama = $_POST['b_nama'];
+        $b_nominal = $_POST['b_nominal'];
+        if ($this->saveBiaya($per_id, $b_nama, $b_nominal, $request)) {
+            return redirect()->route('perjalanan.index')->with('success', 'Post tersimpan');
         }
         else{
             Session::flash('error','Gagal menyimpan');
-            return redirect()->back()->getTargetUrl();
+            return  redirect()->route('perjalanan.index')->with('success', 'Post tersimpan');
 
         }
     }
@@ -433,7 +450,6 @@ class PerjalananController extends Controller
     }
     public function store(Request $request)
     {
-        //Session::flash('error','Harap lengkapi data');
         $this->validate($request,[
             'tj_jarak' => 'required',
             'per_bbm' => 'required',
@@ -454,9 +470,12 @@ class PerjalananController extends Controller
         $tj_kota_1 = $request->tj_kota_1;
        if ($request->per_id!='') {
             $per_id = $request->per_id;
+            $per_biaya = $request->per_biaya;
+            // dd($per_no);
+            $this->remLastTP($per_id, $per_biaya);
+
             $perj = Perjalanan::find($per_id);
             $per_no = $perj->per_no;
-            $this->remLastTP($per_id);
             for ($i=0; $i < count($kt_nama); $i++) { 
                 if ($kt_nama[$i]!='' || $kt_nama[$i]!='0') {
                     $tol = $kt_tol[$i]/$dur[$i];
@@ -475,7 +494,14 @@ class PerjalananController extends Controller
                     $tj_kota_1 = $kt_id;
                 }
             }
-             LogController::storeLog("Edit perjalanan no perjalanan : ".$per_no);
+            $b_nama = $_POST['b_nama'];
+            $b_nominal = $_POST['b_nominal'];
+            if (!$this->saveBiaya($per_id, $b_nama, $b_nominal, $request)) {
+                Session::flash('error','Gagal menyimpan');
+                return redirect()->back()->getTargetUrl();
+            }
+
+            LogController::storeLog("Edit perjalanan no perjalanan : ".$per_no);
             
         }
         else{
@@ -561,7 +587,7 @@ class PerjalananController extends Controller
                 $asal = Kota::find($tj_kota_1)->kt_nama;
                 try {
                     if ($kar_email!='') {
-                        $this->sendEmail($per_tujuan, $kar_email, $per_mobil, $kar_nama, $per_jam, $this->convDate($per_tgl_start), $per_driver, $per_kep, $ken_nopol, $asal);
+                        // $this->sendEmail($per_tujuan, $kar_email, $per_mobil, $kar_nama, $per_jam, $this->convDate($per_tgl_start), $per_driver, $per_kep, $ken_nopol, $asal);
                     }
                 } catch (\Throwable $th) {
                     Session::flash('sukses','Menyimpan data berhasil');
