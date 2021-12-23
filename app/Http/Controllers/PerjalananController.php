@@ -44,13 +44,27 @@ class PerjalananController extends Controller
         $log = new LogController();
         $inv = new InvoiceController();
         $kota = array();
-        $perjalanan = DB::table('perjalanan')
-            ->join('kendaraan', 'perjalanan.per_mobil', '=', 'kendaraan.ken_id')
-            ->join('karyawan', 'perjalanan.per_karyawan', '=', 'karyawan.kar_id')
-            ->join('unit_kerja', 'karyawan.kar_uk', '=', 'unit_kerja.uk_id')
-            ->join('drivers', 'perjalanan.per_driver', '=', 'drivers.dr_id')
-            ->select('perjalanan.*','kendaraan.*', 'drivers.*', 'karyawan.*', 'unit_kerja.uk_nama')
-            ->get()->toArray();
+        $page = request()->get("page");
+        $queryperj = DB::table('perjalanan')
+        ->join('kendaraan', 'perjalanan.per_mobil', '=', 'kendaraan.ken_id')
+        ->join('karyawan', 'perjalanan.per_karyawan', '=', 'karyawan.kar_id')
+        ->join('unit_kerja', 'karyawan.kar_uk', '=', 'unit_kerja.uk_id')
+        ->join('drivers', 'perjalanan.per_driver', '=', 'drivers.dr_id')
+        ->select('perjalanan.*','kendaraan.*', 'drivers.*', 'karyawan.*', 'unit_kerja.uk_nama')
+        ->limit(10)
+        ->orderBy('perjalanan.created_at','desc');
+        if ($page) {
+            $queryperj = $queryperj->offset(($page-1)*10);
+        }
+        if (request()->get("search")) {
+            $queryperj = $queryperj
+                    ->where("perjalanan.per_no",'like',"%".$_GET['search']."%")
+                    ->orWhere('unit_kerja.uk_nama','like',"%".$_GET['search']."%")
+                    ->orWhere('karyawan.kar_nama','like',"%".$_GET['search']."%");
+        }
+        $paginatedPerj = $queryperj->simplePaginate(10)->toArray();
+        
+        $perjalanan = $paginatedPerj['data'];
         $perjalanan = array_map(function ($value) {
             return (array)$value;
         }, $perjalanan);
@@ -65,9 +79,14 @@ class PerjalananController extends Controller
                 $kota[$i][$j] = $inv->getKota($query[$j]['tj_kota_2']);    
             }
         }
-        $data = array('perjalanan' => $perjalanan, 'kota' => $kota);
-        $data['uk'] = UnitKerja::all();
-        return view('main.perjalanan')->with($data);
+        // dd($paginatedPerj);
+        return view('main.perjalanan')->with([
+            "uk"=>UnitKerja::all(),
+            "perjalanan" => $perjalanan,
+            'kota' => $kota,
+            "search"=> request()->get("search"),
+            "pagination" => $paginatedPerj
+        ]);
     }
 	
     public function getPerNo()
