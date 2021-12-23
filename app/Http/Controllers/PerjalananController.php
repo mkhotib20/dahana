@@ -77,10 +77,10 @@ class PerjalananController extends Controller
         $year = date('Y');
         $no = substr($old_no, 4, 4)+1;
         if ($max_year!=$year) {
-            $per_no = date('Y').'0000'+1;
+            $per_no = date('Y').'0000'.'1';
         }
         else{
-            $per_no = date('Y').'0000'+$no;
+            $per_no = date('Y').'0000'."$no";
         }
         return $per_no;
     }
@@ -672,10 +672,10 @@ class PerjalananController extends Controller
         $max_year = substr($max_no, 0, 4);
         $year = date('Y');
         if ($max_year!=$year) {
-            $per_no = date('Y').'0000'+1;
+            $per_no = date('Y').'0000'.'1';
         }
         else{
-            $per_no = date('Y').'0000'+$no;
+            $per_no = date('Y').'0000'."$no";
         }
         
 
