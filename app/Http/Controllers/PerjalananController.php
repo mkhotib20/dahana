@@ -51,10 +51,27 @@ class PerjalananController extends Controller
         ->join('unit_kerja', 'karyawan.kar_uk', '=', 'unit_kerja.uk_id')
         ->join('drivers', 'perjalanan.per_driver', '=', 'drivers.dr_id')
         ->select('perjalanan.*','kendaraan.*', 'drivers.*', 'karyawan.*', 'unit_kerja.uk_nama')
-        ->limit(10)
-        ->orderBy('perjalanan.created_at','desc');
+        ->orderBy('perjalanan.per_status','asc')
+        ->limit(10);
+        
         if ($page) {
             $queryperj = $queryperj->offset(($page-1)*10);
+        }
+        
+        if (request()->get("order_by")) {
+            $arr = \explode(',',request()->get("order_by"));
+            if($arr[0]=='per_status'){
+                $queryperj = $queryperj
+                ->where('perjalanan.per_status','=',$arr[1]);
+            } else {
+                $queryperj = $queryperj
+                
+                ->orderBy("perjalanan.$arr[0]",$arr[1]);
+            }
+            
+        } else {
+            $queryperj = $queryperj
+                        ->orderBy('perjalanan.created_at','desc');
         }
         if (request()->get("search")) {
             $queryperj = $queryperj
@@ -63,7 +80,6 @@ class PerjalananController extends Controller
                     ->orWhere('karyawan.kar_nama','like',"%".$_GET['search']."%");
         }
         $paginatedPerj = $queryperj->simplePaginate(10)->toArray();
-        
         $perjalanan = $paginatedPerj['data'];
         $perjalanan = array_map(function ($value) {
             return (array)$value;
@@ -85,6 +101,7 @@ class PerjalananController extends Controller
             "perjalanan" => $perjalanan,
             'kota' => $kota,
             "search"=> request()->get("search"),
+            "order_by"=> request()->get("order_by"),
             "pagination" => $paginatedPerj
         ]);
     }
@@ -96,10 +113,10 @@ class PerjalananController extends Controller
         $year = date('Y');
         $no = substr($old_no, 4, 4)+1;
         if ($max_year!=$year) {
-            $per_no = date('Y').'0000'.'1';
+            $per_no = date('Y').str_pad('1',4,'0',STR_PAD_LEFT);
         }
         else{
-            $per_no = date('Y').'0000'."$no";
+            $per_no = date('Y').str_pad($no,4,'0',STR_PAD_LEFT);
         }
         return $per_no;
     }
@@ -691,7 +708,7 @@ class PerjalananController extends Controller
         $max_year = substr($max_no, 0, 4);
         $year = date('Y');
         if ($max_year!=$year) {
-            $per_no = date('Y').'0000'.'1';
+            $per_no = date('Y').str_pad('1',4,'0',STR_PAD_LEFT);
         }
         else{
             $per_no = date('Y').'0000'."$no";

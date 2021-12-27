@@ -46,10 +46,24 @@
                             </form>
                         </div>
                         <div class="col-md-6">
+                            <form style="margin-bottom: 20px">
+                                <label for="">Urutkan data</label>
+                                <select onchange="handleReload(this)" name="order_by" value="{{ $search }}"
+                                    class="form-control select2" data-toggle="select2">
+                                    <option @if ($order_by == '') selected @endif value="">Semua</option>
+                                    <option @if ($order_by == 'created_at,DESC') selected @endif value="created_at,DESC">Perjalanan Terbaru</option>
+                                    <option @if ($order_by == 'created_at,ASC') selected @endif value="created_at,ASC">Perjalanan Terlama</option>
+                                    <option @if ($order_by == 'per_status,1') selected @endif value="per_status,1">Hanya yang selesai</option>
+                                    <option @if ($order_by == 'per_status,0') selected @endif value="per_status,0">Hanya yang dalam perjalanan</option>
+                                </select>
+                            </form>
                         </div>
                         <div class="col-md-6">
                             <form style="margin-bottom: 20px">
-                                <input name="search" value="{{$search}}" type="search" placeholder="Cari perjalanan dinas berdasarkan nomor, nama, atau unit kerja" class="form-control">
+                                <label for="">Filter data</label>
+                                <input name="search" value="{{ $search }}" type="search"
+                                    placeholder="Filter perjalanan dinas berdasarkan nomor, nama, atau unit kerja"
+                                    class="form-control">
                             </form>
                         </div>
                         <div class="col-md-12">
@@ -125,7 +139,8 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>{{ ($i+1+(($pagination['current_page']-1)*$pagination['per_page'])) }} </td>
+                                            <td>{{ $i + 1 + ($pagination['current_page'] - 1) * $pagination['per_page'] }}
+                                            </td>
                                             <td>{{ $value['per_no'] }} </td>
                                             <td><b>{{ $value['ken_merk'] }}</b> <br>
                                                 <small>{{ $value['ken_nopol'] }}</small>
@@ -162,18 +177,22 @@
                                         <?php } } ?>
                                     </tbody>
                                 </table>
-                                @if(count($pagination['data'])!=0)
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-end">
-                                      <li class="page-item {{$pagination['current_page']==1 ? "disabled" : ""}}">
-                                        <a class="page-link" href="{{$pagination['prev_page_url']}}" tabindex="-1">Previous</a>
-                                      </li>
-                                      <li class="page-item {{count($pagination['data'])<$pagination['per_page'] ? "disabled" : ""}}">
-                                        <a class="page-link" href="{{$pagination['next_page_url']}}">Next</a>
-                                      </li>
-                                    </ul>
-                                  </nav>
-                                  @endif
+                                @if (count($pagination['data']) != 0)
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li
+                                                class="page-item {{ $pagination['current_page'] == 1 ? 'disabled' : '' }}">
+                                                <a class="page-link" href="{{ $pagination['prev_page_url'] }}"
+                                                    tabindex="-1">Previous</a>
+                                            </li>
+                                            <li
+                                                class="page-item {{ count($pagination['data']) < $pagination['per_page'] ? 'disabled' : '' }}">
+                                                <a class="page-link"
+                                                    href="{{ $pagination['next_page_url'] }}">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                @endif
                             </div>
                         </div>
                     </div> <!-- end card-body-->
@@ -216,6 +235,33 @@
             window.open(url, '_blank')
         </script>
     @endif()
+    <script>
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                if (decodeURIComponent(pair[0]) == variable) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+        }
+
+        function handleReload(event) {
+            console.log(event.value)
+            const url = window.location.pathname
+            const oldSearch = getQueryVariable("search")
+            const oldOrder = getQueryVariable("order_by")
+
+
+            if (oldSearch && oldOrder) {
+                window.location.replace(`${url}?search=${oldSearch}&order_by=${event.value}`)
+            } else if (oldSearch) {
+                window.location.replace(`${url}?search=${oldSearch}&order_by=${event.value}`)
+            } else window.location.replace(`${url}?order_by=${event.value}`)
+
+        }
+    </script>
 
 
 @endsection
